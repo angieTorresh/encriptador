@@ -1,0 +1,351 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    background: #F3F5FC;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.izquierda {
+    height: 100%;
+    width: 75%;
+}
+
+.container__izquierda {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.caja {
+    width: fit-content;
+    margin: 30px;
+}
+
+.container__input {
+    height:65%;
+    width: 100%;
+    color: #0A3871;
+    font-weight: bold;
+    font-family: 'Fira Code', monospace;
+}
+
+#entradaUsuario {
+    background-color: #F3F5FC;
+    color: #0A3871;
+    border: none;
+    margin: 0 15%;
+    height: 100%;
+    width: 75%;
+    font-weight: bold;
+    font-size: 36px;
+    font-family: 'Fira Code', monospace;
+}
+
+#entradaUsuario::placeholder {
+    color: #0A3871;
+}
+
+#entradaUsuario:focus {
+    outline: none;
+}
+
+.container__inferior {
+    width: 75%;
+    margin: 2% 15%;
+    padding: 0 0 3% 0;
+}
+
+.advertencia {
+    font-size: 16px;
+    font-family: 'Fira Code', monospace;
+}
+
+.container__botones {
+    display: flex;
+    gap: 2em;
+}
+
+#botonAzul {
+    background: #0A3871;
+    color: #FFFFFF;
+}
+
+#botonAzul:hover {
+    background: #D8DFE8;
+    color: #0A3871;
+    transform: scale(1.1);
+}
+
+#botonGris {
+    background: #D8DFE8;
+    color: #0A3871;
+}
+
+#botonGris:hover {
+    background: #0A3871;
+    color: #FFFFFF;
+    transform: scale(1.1);
+}
+
+.container__boton {
+    border-radius: 16px;
+    padding: 16px 24px;
+    width: 100%;
+    font-weight: bold;
+    font-family: 'Fira Code', monospace;
+    font-size: 24px;
+    border: none;
+    margin-top: 2rem;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.derecha {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 2%;
+    padding: 3%;
+    background: #FFFFFF;
+    border-radius: 32px;
+    font-family: 'Fira Code', monospace;
+    text-align: center;
+}
+
+#resultado {
+    word-wrap: break-word;
+    height: 100%;
+    text-align: left;
+    font-size: 36px;
+    overflow-y: auto;
+}
+
+.container__derecha {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__mensaje {
+    height: 100%;
+    margin: 40% 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#muñeco {
+    display: flex;
+    flex-direction: column;
+}
+
+#mensaje1 {
+    font-weight: bolder;
+    font-size: 24px;
+    margin: 10px;
+}
+
+#mensaje2 {
+    font-size: 16px;
+}
+
+@media screen and (max-width:490px) {
+    html, body {
+        flex-direction: column;
+        overflow: auto;
+    }
+    
+    .izquierda {
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        width: 100%;
+    }
+    
+    .caja {
+        height: auto;
+        width: auto;
+        margin: 20px 0;
+    }
+
+    #logo {
+        max-width: 80px;
+    }
+    .container__input {
+        height: 50%;
+        width: 100%;
+        font-weight: bold;
+        font-family: 'Fira Code', monospace;
+    }
+    
+    #entradaUsuario {
+        margin: 0 10%;
+        width: 80%;
+        font-size: 24px;
+    }
+    
+    .container__inferior {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .advertencia {
+        font-size: 12px;
+        margin: 0 10%;
+    }
+    
+    .container__botones {
+        height: fit-content;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .container__boton {
+        width: 80%;
+        padding: 4% 10%;
+        font-size: 16px;
+        margin: 2% 9% 0;
+        box-sizing: border-box;
+    }
+    
+    .derecha {
+        height: 40%;
+        width: auto;
+        margin: 5% 10%;
+        padding: 3%;
+    }
+    
+    #resultado {
+        padding: 5%;
+        font-size: 24px;
+    }
+    
+    .container__derecha {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container__mensaje {
+        height: fit-content;
+        width: 80%;
+        margin: 35% 10%;
+    }
+    
+    #muñeco {
+        display: none;
+    }
+    
+    #mensaje1 {
+        font-size: 20px;
+        margin: 5%;
+    }
+    
+    #mensaje2 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width:490px) and (max-width:1024px) {
+    html, body {
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .izquierda {
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .caja {
+        height: auto;
+        width: auto;
+        margin: 20px 0;
+    }
+
+    #logo {
+        max-width: 160px;
+    }
+    .container__input {
+        height: 100%;
+        width: 100%;
+    }
+    
+    #entradaUsuario {
+        margin: 0 10%;
+        width: 80%;
+        font-size: 32px;
+    }
+    
+    .container__inferior {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 80%;
+        margin: 0;
+        padding: 0 10%;
+    }
+    
+    .advertencia {
+        font-size: 16px;
+    }
+    
+    .container__botones {
+        height: fit-content;
+        gap: 1em;
+    }
+    
+    .container__boton {
+        font-size: 24px;
+    }
+    
+    .derecha {
+        height: 40%;
+        width: auto;
+        margin: 5% 10%;
+        padding: 3%;
+    }
+    
+    #resultado {
+        padding: 5%;
+        font-size: 24px;
+    }
+    
+    .container__derecha {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container__mensaje {
+        height: fit-content;
+        width: 80%;
+        margin: 25% 10%;
+    }
+    
+    #muñeco {
+        display: none;
+    }
+    
+    #mensaje1 {
+        font-size: 30px;
+        margin: 5%;
+    }
+    
+    #mensaje2 {
+        font-size: 24px;
+    }
+}
